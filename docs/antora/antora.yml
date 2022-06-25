@@ -4,7 +4,7 @@ version: master
 asciidoc:
   attributes:
     numbered: '@'
-    app-name: 'peacetrue-servlet'
+    app-name: peacetrue-servlet
 start_page: ROOT:index.adoc
 nav:
   - modules/ROOT/nav.adoc

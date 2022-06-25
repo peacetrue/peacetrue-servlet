@@ -9,8 +9,8 @@ v1.0, 2022-06-02: SNAPSHOT
 :resourcesdir: src/main/resources
 :testsourcedir: src/test/java
 :source-highlighter: highlightjs
-:app-name: 'peacetrue-servlet'
-:foresight-repo-id: '1b9d03d7-1643-4809-a42f-60d8d4d69575'
+:app-name: peacetrue-servlet
+:foresight-repo-id: 1b9d03d7-1643-4809-a42f-60d8d4d69575
 
 image:https://img.shields.io/lgtm/grade/java/github/peacetrue/{app-name}["LGTM Grade",link="https://lgtm.com/projects/g/peacetrue/{app-name}"]
 image:https://snyk.io/test/github/peacetrue/{app-name}/badge.svg["Snyk",link="https://app.snyk.io/org/peacetrue"]
