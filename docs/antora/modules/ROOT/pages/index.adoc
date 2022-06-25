@@ -1,2 +1,19 @@
 = 简介
 
+servlet-api 扩展。
+
+== 重复读取请求体
+
+GET 请求，内容类型为 `null`，没有请求体。
+
+请求体从输入流中读取，只能读取一次，再次读取会抛出异常；如果需要重复读取，可自定义 `Filter` 实现。
+
+当内容类型为表单（即 `Content-Type` = `application/x-www-form-urlencoded` 或 `multipart/form-data`）时，
+获取表单参数（即调用 `HttpServletRequest#getParameterMap()` 或 `HttpServletRequest#getParameter(String)` 方法）时，会从输入流中读取请求体，
+并缓存请求参数键值对，后续再调用上述方法，直接从缓存中读取。
+
+当内容类型不是表单时，获取表单参数只会从查询参数中读取，此时不会读取输入流；
+当调用 `HttpServletRequest.getInputStream()` 和 `HttpServletRequest.getReader()` 时，会读取输入流。
+
+实现重复读取请求体，则需要在内容类型不是表单时，读取输入流后缓存到内存中，后续可从缓存中重复读取。
+

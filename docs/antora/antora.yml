@@ -1,10 +1,10 @@
-name: peacetrue-template-gradle
-title: Gradle 模板项目
+name: peacetrue-servlet
+title: servlet-api 扩展
 version: master
 asciidoc:
   attributes:
     numbered: '@'
-    app-name: 'peacetrue-template-gradle'
+    app-name: 'peacetrue-servlet'
 start_page: ROOT:index.adoc
 nav:
   - modules/ROOT/nav.adoc
